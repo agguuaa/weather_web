@@ -36,6 +36,10 @@ body {
   font-family: "Roboto", Arial, sans-serif;
 }
 
+small {
+  text-align: center;
+}
+
 .wrapper {
   width: 100%;
   max-width: 31.25rem;
