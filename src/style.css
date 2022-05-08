@@ -1,3 +1,7 @@
+.weather_web {
+  max-width: 600px;
+}
+
 h2 {
   font-size: 32px;
   color: black;
