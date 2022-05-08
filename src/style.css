@@ -1,6 +1,18 @@
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  text-align: center;
+  color: lightslategray;
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 80%;
+}
+
 h2 {
   font-size: 28px;
-  color: gray;
+  font-weight: lighter;
+  color: black;
   text-align: center;
   padding-top: 0px;
   margin-top: 3rem;
@@ -8,12 +20,11 @@ h2 {
 
 h3 {
   font-size: 12px;
-  color: lightslategray;
-  font-family: Arial;
   font-weight: lighter;
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
+  list-style: none;
 }
 
 ul {
@@ -22,27 +33,27 @@ ul {
   overflow: hidden;
 }
 
-.next-days-weather {
-  font-size: 14px;
-  text-align: center;
-  color: lightslategray;
-  list-style: none;
-  display: inline-flex;
-  margin: auto;
-}
-
-body {
-  font-family: "Roboto", Arial, sans-serif;
-  max-width: 950px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 80%;
+li {
+  padding: 8px;
 }
 
 small {
   display: block;
   text-align: center;
+}
+
+#temp-specific {
+  position: relative;
+  font-size: 15px;
+  top: -10px;
+}
+
+.next-days-weather {
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  display: inline-flex;
+  margin: auto;
 }
 
 .wrapper {
