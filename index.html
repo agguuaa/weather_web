@@ -15,16 +15,16 @@
 
   <body>
 
-    <div id="app"></div>
+    <div id="app">
     <!DOCTYPE html>
     <html>
       
       <div class="container">
        
       <h1>  
+
         <form id="search-form">
           <div class="wrapper">
-            <div class="label"> </div>
             <div class="searchBar">
               <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" />
               <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
@@ -39,6 +39,7 @@
             </div>
           </div>
         </form>
+
         <button id="currentPosition">
           My current location
         </button>
@@ -56,15 +57,18 @@
     </h2>
 
     <h3>
+    <li>
     <div class="row justify-content-center" id="daySpace">
       <div class="col-1" id="currentDay">
         Sunday
       </div>
+    </li>
 
+    <li>
       <div class="col-2" id="currentTime" id="timeSpace">
         14:10
       </div>
-    </div>
+    </li>
 
     <div class="row justify-content-center" id="weatherDescribtion">
       <div class="col-1" id="currentWeather">
@@ -100,103 +104,65 @@
   </h3>
 
 
-    <div class="next-days-weather">
-        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-  
-            <div class="col">
-              <div class="p-1 border bg-light">
-                Monday
-              </div>
-            </div>
+    <div class="next-days-weather" class="clearfix" class="float-center">
+      <li>
+        Monday
+        <br />
+        🌤
+        <br />
+       18°C
+      </li>
+      
+      <li>
+        Tuesday
+        <br />
+        🌤
+        <br />
+        15°C
+      </li>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                Tuesday
-              </div>
-            </div>
+      <li>
+        Wednesday
+        <br />
+        ☁️
+        <br />
+        16°C
+      </li>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                Wednesday
-              </div>
-            </div>
+      <li>
+        Thursday
+        <br />
+        ☁️
+        <br />
+        16°C
+      </li>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                Thursday
-              </div>
-            </div>
+      <li>
+        Friday
+        <br />
+        ☁️
+        <br />
+        16°C
+      </li>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                Friday
-              </div>
-            </div>
+      <li>
+        Satruday
+        <br />
+        ☁️
+        <br />
+        16°C
+      </li>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                🌤
-              </div>
-            </div>
+      <li>
+        Sunday
+        <br />
+        ☁️
+        <br />
+        16°C
+      </li>
+    </div>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                ☁️
-             </div>
-            </div>
 
-            <div class="col">
-              <div class="p-1 border bg-light">
-                🌧
-              </div>
-            </div>
-
-            <div class="col">
-              <div class="p-1 border bg-light">
-                🌥
-             </div>
-            </div>
-
-            <div class="col">
-              <div class="p-1 border bg-light">
-                ☀️
-              </div>
-            </div>
-
-              <div class="col">
-                    <div class="p-1 border bg-light">
-                      18°C
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="p-1 border bg-light">
-                        15°C
-                   </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="p-1 border bg-light">
-                        16°C
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="p-1 border bg-light">
-                        17°C
-                    </div>
-                  </div>
-
-                  <div class="col">
-                    <div class="p-1 border bg-light">
-                      21°C
-                  </div>
-                </div>
-
-          </div>
-        </div>
-       </div>
-      </div>
 
       <br />
       <br />
@@ -209,8 +175,7 @@
         by agguuaa
       </small>
 
-    </html>
-
     <script src="src/index.js"></script>
   </body>
 </html>
+</div>
