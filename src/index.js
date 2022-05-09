@@ -1,3 +1,31 @@
+let now = new Date();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+
+let hours = now.getHours();
+if (hours < 10) {
+  hours = `0${hours}`;
+}
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+
+let daySpace = document.querySelector("#daySpace");
+let day = days[now.getDay()];
+
+let timeSpace = document.querySelector("#timeSpace");
+
+daySpace.innerHTML = `${day}`;
+timeSpace.innerHTML = `${hours}:${minutes}`;
+
 //Bonus
 function showPosition(position) {
   let city = document.querySelector("currentPosition");
@@ -40,31 +68,3 @@ function showTemp(response) {
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
 }
-
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
-}
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let daySpace = document.querySelector("#currentDay");
-let day = days[now.getDay()];
-
-let timeSpace = document.querySelector("#currentTime");
-
-daySpace.innerHTML = `${day}`;
-timeSpace.innerHTML = `${hours}:${minutes}`;
