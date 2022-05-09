@@ -48,74 +48,47 @@
 
 
      <h2>
-        <span id="current-city">
+
+        <span id="current-city" class="city">
           Tokyo
         </span> 
+
         <span id="current-temperature">
-          20 
+          0 
          <span id="temp-specific">
-           °C|°F
+          °C|°F
          </span>
         </span>
+
     </h2>
 
     <h3>
-    <div class="row justify-content-center" id="daySpace">
-      <div class="col-1" id="currentDay">
-        <li>
-        Sunday
-        </li>
-      </div>
 
-      <div class="col-2" id="currentTime" id="timeSpace">
-        <li>
+    <div class="row justify-content-center">
+      <div class="clearfix weather_web">
+        <img
+        src="http://ssl.gstatic.com/onebox/weather/64/sunny.png"
+        alt="Clear"
+        class="float-left"
+        />
+
+       <div class="col-6">
+        <li id="daySpace"></li> Sunday <span id="timeSpace" id="currentTime">
         00:00
-        </li>
-      </div>
+        </span>
 
-    <div class="row justify-content-center" id="weatherDescribtion">
-      <div class="col-1" id="currentWeather">
-        <li>
-        Sunny
-        </li>
-      </div>
+        <ul>
+       <div class="float-center">
+         <li>Humidity:<span id="humidity"></span>%</li>
+       </div>
+       </ul>
 
-      <div class="col-2" id="currentEmoji" id="emojiSpace">
-        <li>
-        ☀️
-        </li>
+       </div>
       </div>
     </div>
 
     <br />
 
-    <div class="row justify-content-center" class="clearfix" class="float-center">
-      <div class="col-2">
-        <li>
-        Percipitation:
-        </li>
-      </div>
-
-      <div class="col-2" id="percipitation">
-        <li>
-        70%
-        </li>
-      </div>
-    </div>
-
-    <div class="row justify-content-center" class="clearfix">
-      <div class="col-2">
-        <li>
-        Wind:
-        </li>
-      </div>
-
-      <div class="col-2" id="wind">
-        <li>
-        10 km/h
-        </li>
-      </div>
-    </div>
   </h3>
 
 
@@ -176,6 +149,7 @@
         16°C
       </li>
     </div>
+  </div>
 
 
 

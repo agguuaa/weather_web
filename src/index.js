@@ -1,7 +1,7 @@
 //Bonus
 function showPosition(position) {
-  let currentLocation = document.querySelector("currentPosition");
-  currentLocation.innerHTML = `Your latitude is ${position.coords.longtitude} and your longtitude is ${position.coords.longtitude}`;
+  let city = document.querySelector("currentPosition");
+  city.innerHTML = `Your latitude is ${position.coords.longtitude} and your longtitude is ${position.coords.longtitude}`;
 }
 
 function getCurrentPosition() {
@@ -36,7 +36,7 @@ form.addEventListener("submit", showCity);
 function showTemp(response) {
   let temp = Math.round(response.data.main.temp);
   let degrees = document.querySelector("#current-temperature");
-  degrees.innerHTML = `${temp}`;
+  degrees.innerHTML = `${temp} °C|°F`;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
 }
@@ -49,7 +49,7 @@ let days = [
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday"
+  "Saturday",
 ];
 
 let hours = now.getHours();
