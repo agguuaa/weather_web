@@ -26,10 +26,16 @@ let timeSpace = document.querySelector("#timeSpace");
 daySpace.innerHTML = `${day}`;
 timeSpace.innerHTML = `${hours}:${minutes}`;
 
-//Bonus
+//
 function showPosition(position) {
   let city = document.querySelector("currentPosition");
   city.innerHTML = `Your latitude is ${position.coords.longtitude} and your longtitude is ${position.coords.longtitude}`;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function getCurrentPosition() {
@@ -67,4 +73,8 @@ function showTemp(response) {
   degrees.innerHTML = `${temp} °C|°F`;
   let currentCity = document.querySelector("#current-city");
   currentCity.innerHTML = response.data.name;
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/10d@2x.png`
+  );
 }
