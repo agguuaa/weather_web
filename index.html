@@ -67,17 +67,19 @@
     <div class="row justify-content-center">
       <div class="clearfix weather_web">
         <img
-        src="http://ssl.gstatic.com/onebox/weather/64/sunny.png"
+        src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
         alt="Clear"
         class="float-center"
         id="icon"
         />
 
        <div class="row justify-content-center">
+        <li id="description"></li> 
         <li id="daySpace"><span id="timeSpace"></span></li>
 
        <div class="float-center">
          <ul>
+         <li id="date"><span id="hour"></span></li>  
          <li>Humidity:<span id="humidity"></span>%</li>
          <li>Wind:<span id="wind"></span>km/h</li>
          </ul>
