@@ -1,3 +1,29 @@
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let day = days[date.getDay()];
+    return `${day} ${hours}:${minutes}`;
+  }
+}
+
 function showTemp(response) {
   let temperatureElement = document.querySelector("#current-temp");
   let cityElement = document.querySelector("#current-city");
@@ -31,7 +57,12 @@ function searchEngine(city) {
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemp);
 }
 
-//Show city name
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#searchQueryInput");
+  search(cityInputElement.value);
+}
+
 function showCity(event) {
   event.preventDefault();
   let city = document.querySelector("#searchQueryInput");
@@ -41,39 +72,31 @@ function showCity(event) {
   searchEngine(city.value);
 }
 
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", showCity);
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
 
-function formatDate(timestamp) {
-  let now = new Date(timestamp);
-
-  let hours = now.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = now.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let day = days[Date.getDay()];
-  return `${day} ${getHours}:${getMinutes}`;
-
-  function formatDay(timestamp) {
-    let date = new Date(timestamp * 1000);
-    let day = date.getDay();
-    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-    return days[day];
-  }
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
