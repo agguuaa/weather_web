@@ -1,4 +1,10 @@
-//Search city and display city name & current temp
+function showTemp(response) {
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#current-temp");
+  celciusTemperature = response.data.main.temp;
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
 function searchEngine(city) {
   let apiKey = "af683468eb6c609597efb70857e6314f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -18,19 +24,6 @@ function showCity(event) {
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", showCity);
-
-//Show temperature
-function showTemp(response) {
-  let temp = Math.round(response.data.main.temp);
-  let degrees = document.querySelector("#current-temperature");
-  degrees.innerHTML = `${temp}`;
-  let currentCity = document.querySelector("#current-city");
-  currentCity.innerHTML = response.data.name;
-}
-
-function tempCF(response) {
-  let;
-}
 
 function formatDate(timestamp) {
   let now = new Date(timestamp);
@@ -65,3 +58,26 @@ function formatDate(timestamp) {
     return days[day];
   }
 }
+
+//function displayTemperature(response) {
+//let temperatureElement = document.querySelector("#current-temperature");
+//let cityElement = document.querySelector("#current-city");
+//let descriptionElement = document.querySelector("#description");
+//let humidityElement = document.querySelector("#humidity");
+//let windElement = document.querySelector("#wind");
+//let dateElement = document.querySelector("#date");
+//let iconElement = document.querySelector("#icon");
+
+//celsiusTemperature = response.data.main.temp;
+
+//temperatureElement.innerHTML = Math.round(celsiusTemperature);
+//cityElement.innerHTML = response.data.name;
+//descriptionElement.innerHTML = response.data.weather[0].description;
+//humidityElement.innerHTML = response.data.main.humidity;
+//windElement.innerHTML = Math.round(response.data.wind.speed);
+//dateElement.innerHTML = formatDate(response.data.dt * 1000);
+//iconElement.setAttribute("src", `https://openweathermap.org/img/wn/01d.png`);
+//iconElement.setAttribute("alt", response.data.weather[0].description);
+
+//getForecast(response.data.coord);
+//}
