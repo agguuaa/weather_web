@@ -1,8 +1,22 @@
 function showTemp(response) {
-  console.log(response.data);
   let temperatureElement = document.querySelector("#current-temp");
+  let cityElement = document.querySelector("#current-city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   celciusTemperature = response.data.main.temp;
+
   temperatureElement.innerHTML = Math.round(celciusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute("src", `https://openweathermap.org/img/wn/01d.png`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchEngine(city) {
@@ -58,26 +72,3 @@ function formatDate(timestamp) {
     return days[day];
   }
 }
-
-//function displayTemperature(response) {
-//let temperatureElement = document.querySelector("#current-temperature");
-//let cityElement = document.querySelector("#current-city");
-//let descriptionElement = document.querySelector("#description");
-//let humidityElement = document.querySelector("#humidity");
-//let windElement = document.querySelector("#wind");
-//let dateElement = document.querySelector("#date");
-//let iconElement = document.querySelector("#icon");
-
-//celsiusTemperature = response.data.main.temp;
-
-//temperatureElement.innerHTML = Math.round(celsiusTemperature);
-//cityElement.innerHTML = response.data.name;
-//descriptionElement.innerHTML = response.data.weather[0].description;
-//humidityElement.innerHTML = response.data.main.humidity;
-//windElement.innerHTML = Math.round(response.data.wind.speed);
-//dateElement.innerHTML = formatDate(response.data.dt * 1000);
-//iconElement.setAttribute("src", `https://openweathermap.org/img/wn/01d.png`);
-//iconElement.setAttribute("alt", response.data.weather[0].description);
-
-//getForecast(response.data.coord);
-//}
