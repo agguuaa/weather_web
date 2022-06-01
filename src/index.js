@@ -8,20 +8,20 @@ function formatDate(timestamp) {
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
-
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-
-    let day = days[date.getDay()];
-    return `${day} ${hours}:${minutes}`;
   }
+
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes}`;
 }
 
 function showTemp(response) {
@@ -60,7 +60,7 @@ function searchEngine(city) {
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#searchQueryInput");
-  search(cityInputElement.value);
+  searchEngine(cityInputElement.value);
 }
 
 function showCity(event) {
@@ -74,7 +74,7 @@ function showCity(event) {
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#units");
 
   celsiusLink.classList.remove("active");
   fahrenheitLink.classList.add("active");
@@ -86,7 +86,7 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
   fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#units");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
@@ -100,3 +100,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+searchEngine("tokyo");
