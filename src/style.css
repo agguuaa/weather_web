@@ -21,6 +21,17 @@ h2 {
 h3 {
   font-size: 12px;
   font-weight: lighter;
+  margin: 5px;
+  padding: 0%;
+}
+
+h4 {
+  font-size: 14px;
+  text-align: center;
+  list-style: none;
+  display: table-row-group;
+  margin: auto;
+  position: relative;
 }
 
 ul {
@@ -41,14 +52,6 @@ li::first-letter {
   position: relative;
   font-size: 15px;
   top: -10px;
-}
-
-.next-days-weather {
-  font-size: 14px;
-  text-align: center;
-  list-style: none;
-  display: inline-flex;
-  margin: auto;
 }
 
 .wrapper {
