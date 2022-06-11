@@ -127,3 +127,12 @@ li::first-letter {
 #wind {
   color: black;
 }
+
+#weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-temperature-max {
+  color: black;
+}
