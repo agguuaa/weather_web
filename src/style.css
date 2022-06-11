@@ -21,8 +21,9 @@ h2 {
 h3 {
   font-size: 16px;
   font-weight: lighter;
-  margin: 5px;
+  margin: 0px;
   padding: 0%;
+  display: flexbox;
 }
 
 h4 {
@@ -32,11 +33,6 @@ h4 {
   display: inline-block;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 li {
   padding: 8px;
   list-style: none;
@@ -44,12 +40,6 @@ li {
 
 li::first-letter {
   text-transform: capitalize;
-}
-
-.units {
-  position: relative;
-  font-size: 15px;
-  top: -10px;
 }
 
 .wrapper {
@@ -102,11 +92,25 @@ li::first-letter {
 #currentPosition {
   width: 40%;
   height: 2.8rem;
-  background: #f7f1cf;
+  background: #f5e487;
   outline: none;
   border: none;
   border-radius: 1.625rem;
   font-size: 0.9rem;
   margin: auto;
   display: block;
+}
+
+#humidity {
+  color: black;
+}
+
+#wind {
+  color: black;
+}
+#units {
+  position: relative;
+  font-size: 15px;
+  top: -10px;
+  text-decoration-line: none;
 }

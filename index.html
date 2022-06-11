@@ -14,7 +14,6 @@
   </head>
 
   <body>
-
     <div id="app">
     <!DOCTYPE html>
     <html>
@@ -68,20 +67,17 @@
       <div class="clearfix weather_web">
         <img
         src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
-        class="float-center"
+        class="float-left"
         alt = "clear"
         id= "icon"
         />
 
        <div class="row justify-content-center">
-        <li id="description"></li> 
-        <li id="daySpace"><span id="timeSpace"></span></li>
-
+        <li id="daySpace"><span id="timeSpace"></span><span id="description"></span></li>
        <div class="float-center">
          <ul>
          <li id="date"><span id="hour"></span></li>  
-         <li>Humidity: <span id="humidity"></span>%</li>
-         <li>Wind: <span id="wind"></span> km/h</li>
+         <li>Humidity: <span id="humidity"></span>%<span> Wind: <span id="wind"></span> km/h</li>
          </ul>
        </div>
       
