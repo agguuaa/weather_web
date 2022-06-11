@@ -6,15 +6,22 @@ body {
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
-  border-radius: 8%;
+  border-radius: 4%;
+}
+
+h1 {
+  font-size: 28px;
+  color: black;
+  margin-left: 350px;
 }
 
 h2 {
   font-size: 28px;
-  font-weight: lighter;
+  font-weight: bold;
   color: black;
-  text-align: center;
+  text-align: left;
   padding-top: 0px;
+  margin-left: 2rem;
   margin-top: 3rem;
 }
 
@@ -101,16 +108,22 @@ li::first-letter {
   display: block;
 }
 
+#icon {
+  width: 120px;
+  height: 120px;
+}
+
+#units {
+  position: relative;
+  font-size: 15px;
+  top: -10px;
+  text-decoration: none;
+}
+
 #humidity {
   color: black;
 }
 
 #wind {
   color: black;
-}
-#units {
-  position: relative;
-  font-size: 15px;
-  top: -10px;
-  text-decoration-line: none;
 }
