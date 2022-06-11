@@ -23,7 +23,7 @@ h3 {
   font-weight: lighter;
   margin: 0px;
   padding: 0%;
-  display: flexbox;
+  text-align: left;
 }
 
 h4 {
