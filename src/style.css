@@ -9,13 +9,11 @@ html {
 body {
   font-family: "Roboto", Arial, sans-serif;
   text-align: center;
-  color: lightslategray;
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 4%;
-  backdrop-filter: blur 10px;
 }
 
 h1 {
@@ -40,10 +38,6 @@ h1 {
   list-style: none;
 }
 
-li::first-letter {
-  text-transform: capitalize;
-}
-
 .wrapper {
   width: 100%;
   max-width: 31.25rem;
@@ -58,6 +52,10 @@ li::first-letter {
   text-transform: uppercase;
   letter-spacing: +1.3px;
   margin-bottom: 1rem;
+}
+
+li::first-letter {
+  text-transform: capitalize;
 }
 
 .searchBar {
@@ -108,6 +106,7 @@ li::first-letter {
   width: 120px;
   height: 120px;
 }
+
 #current-temp {
   color: black;
   font-size: 33px;
@@ -118,6 +117,14 @@ li::first-letter {
   position: relative;
   font-size: 15px;
   top: -10px;
+  text-decoration: none;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
+
+#fahrenheit-link {
   text-decoration: none;
 }
 
@@ -133,8 +140,4 @@ li::first-letter {
   margin-top: 20px;
   font-size: 16px;
   margin-left: 1rem;
-}
-
-.weather-forecast-temperature-max {
-  color: black;
 }
