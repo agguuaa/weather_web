@@ -14,13 +14,19 @@
     
   </head>
 
+
   <body>
+
     <div id="app">
     <!DOCTYPE html>
     <html>
       
-    
-      <div class="container"> 
+    <div class="container"> 
+      <div class="weather">
+        <div class="box">
+          <p>backdrop-filter: blur(10px)</p>
+        </div>
+
 
         <form id="search-form">
           <div class="wrapper">
@@ -43,10 +49,15 @@
           My current location
         </button>
 
-  
-    <h1>
+  <div class="container" id="weather-overview">
     <div class="row">
-     <div class="col-6">
+      <div class="col-6">
+        <h1 id="current-city" class="city"></h1>
+        </div>
+      
+
+
+    <div class="col-6">
       <div class="clearfix weather_web">
         <img
         src="https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"
@@ -57,38 +68,26 @@
      <a href="#" id="celsius-link" class="active">°C</a> |
      <a href="#" id="fahrenheit-link">°F</a>
      </span>
-         </div>
-        </div>
-        </div>
-      </h1>
-     
+     </div>
+     </div>
 
-      <h2>
-          <div class="row">
-            <div class="col-6">
-            <div id="current-city" class="city"></div>
-          </div>
-          </div>
+     <div class="col-9">
+          <ul id="weather-conditions">
+            <li id="date"><span id="hour"></span></li>
+            <li><span id="description"></span></li> 
+            <li>Humidity: <span id="humidity"></span>%<span> Wind: <span id="wind"></span> km/h</li>
+          </ul>
         </div>
-     </div> 
-
-     </h2>
-
-     <h3>
-          <div class="row">
-            <div class="col-6">
-            <li id="daySpace"><span id="timeSpace"></span></li>
-             <div class="float-left">
-              <ul>
-             <li id="date"><span id="hour"></span></li>
-             <li><span id="description"></span></li> 
-             <li>Humidity: <span id="humidity"></span>%<span> Wind: <span id="wind"></span> km/h</li>
-            </ul> 
-          </div>
-        </div>
-       </div>
-      </div>
-  </h3>
+  </div>
+</div>
+</div>
+</div>
+    </div>
+  </div>
+    </div>
+  </div>
+ </div>
+ 
 
   <br />
   
@@ -106,6 +105,7 @@
         >Coded</a>
         by agguuaa
       </small>
+  
 
     <script src="src/index.js"></script>
   </body>
