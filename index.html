@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
   </head>
 
@@ -58,31 +59,35 @@
      </span>
          </div>
         </div>
+        </div>
       </h1>
      
 
       <h2>
-
-     <div id="current-city" class="city">
+          <div class="row">
+            <div class="col-6">
+            <div id="current-city" class="city"></div>
+          </div>
+          </div>
+        </div>
      </div> 
 
      </h2>
 
      <h3>
-
-       <div class="row justify-content-center">
-        <li id="daySpace"><span id="timeSpace"></span></li>
-       <div class="float-center">
-        <ul>
-         <li id="date"><span id="hour"></span><span id="description"></span></li> 
-         <li>Humidity: <span id="humidity"></span>%<span> Wind: <span id="wind"></span> km/h</li>
-         </ul> 
-       </div>
-      
-
+          <div class="row">
+            <div class="col-6">
+            <li id="daySpace"><span id="timeSpace"></span></li>
+             <div class="float-left">
+              <ul>
+             <li id="date"><span id="hour"></span></li>
+             <li><span id="description"></span></li> 
+             <li>Humidity: <span id="humidity"></span>%<span> Wind: <span id="wind"></span> km/h</li>
+            </ul> 
+          </div>
+        </div>
        </div>
       </div>
-    </div>
   </h3>
 
   <br />
