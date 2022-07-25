@@ -1,2 +1,2 @@
-# weather_web
+# weather app
 Created with CodeSandbox
